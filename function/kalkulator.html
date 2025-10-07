@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let pilihan;
+
+      do{
+            pilihan = prompt("1 = penjumlahan, 2 = pengurangan, 3 = perkalian, 4 = pembagian, 5 = exit. masukkan pilihan");
+        if(pilihan == "1"){
+            let a = Number(prompt("masukkan angka pertama :"));
+            let b = Number(prompt("masukkan angka kedua :"));
+            const penjumlahan=(a,b) => a + b;    
+            alert(penjumlahan(a,b));
+        } else if (pilihan == "2") {
+            let a = Number(prompt("masukkan angka pertama:"));
+            let b = Number(prompt("masukkan angka kedua:"));
+            const pengurangan=(a,b) => a - b;    
+            alert(pengurangan(a,b));
+        }else if (pilihan == "3"){
+            let a = Number(prompt("masukkan angka pertama:"));
+            let b = Number(prompt("masukkan angka kedua:"));
+            const perkalian=(a,b) => a * b;    
+            alert(perkalian(a,b));
+        }else if (pilihan == "4"){
+          let a = Number(prompt("masukkan angka pertama:"));
+          let b = Number(prompt("masukkan angka kedua:"));
+         const pembagian=(a,b) => a/b;    
+            alert(pembagian(a,b));
+        }
+      } while (pilihan != "5");
+    </script>
+</body>
+</html>

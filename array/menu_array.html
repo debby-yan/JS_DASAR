@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <title>Menu Program JavaScript</title>
+</head>
+<body>
+<script>
+  // 1. Fungsi menghitung rata-rata
+  function hitungRataRata(data_nilai) {
+    let total = 0;
+    for (let i = 0; i < data_nilai.length; i++) {
+      total += data_nilai[i];
+    }
+    return total / data_nilai.length;
+  }
+
+  // 2.Fungsi mengurutkan angka
+  function urutkanAngka(data_nilai) {
+    return data_nilai.slice().sort(function(a, b){
+      return a - b;
+    });
+  }
+
+  // 3.Fungsi mencari nilai terbesar
+  function cariTerbesar(data_nilai) {
+    let terbesar = data_nilai[0];
+    for (let i = 1; i < data_nilai.length; i++) {
+      if (data_nilai[i] > terbesar) terbesar = data_nilai[i];
+    }
+    return terbesar;
+  }
+
+  // 4.Fungsi deret Fibonacci
+  function deretFibonacci(n) {
+    let fib = [0, 1];
+    for (let i = 2; i < n; i++) {
+      fib[i] = fib[i - 1] + fib[i - 2];
+    }
+    return fib;
+  }
+
+  let pilihan;
+  do {
+    pilihan = prompt(
+      "MENU:\n" +
+      "1. Hitung Rata-rata\n" +
+      "2. Urutkan Angka\n" +
+      "3. Cari Nilai Terbesar\n" +
+      "4. Deret Fibonacci\n" +
+      "5. Exit\n" +
+      "Masukkan pilihan:"
+    );
+
+    if (pilihan == "1") {
+      let n = prompt("Banyaknya data:");
+      let data_nilai = [];
+      for (let i = 1; i <= n; i++) {
+        data_nilai.push(Number(prompt("Masukkan nilai ke-" + i + ":")));
+      }
+      console.info("Rata-rata: " + hitungRataRata(data_nilai));
+    }
+
+    else if (pilihan == "2") {
+      let n = prompt("Banyaknya data:");
+      let data = [];
+      for (let i = 1; i <= n; i++) {
+        data.push(Number(prompt("Masukkan nilai ke-" + i + ":")));
+      }
+      console.info("Urutan: " + urutkanAngka(data));
+    }
+
+    else if (pilihan == "3") {
+      let n = prompt("Banyaknya data:");
+      let data_nilai = [];
+      for (let i = 1; i <= n; i++) {
+        data_nilai.push(Number(prompt("Masukkan nilai ke-" + i + ":")));
+      }
+      console.info("Nilai terbesar: " + cariTerbesar(data_nilai));
+    }
+
+    else if (pilihan == "4") {
+      let n = Number(prompt("Masukkan jumlah deret Fibonacci:"));
+      console.info("Deret Fibonacci: " + deretFibonacci(n).join(", "));
+    }
+
+  } while (pilihan != "5");
+
+  console.info("Program selesai.");
+    </script>
+</body>
+</html>

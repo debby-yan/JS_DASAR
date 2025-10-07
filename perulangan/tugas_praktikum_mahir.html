@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+    // 1. Faktorial
+    // let n = parseInt(prompt("Masukkan n (n >= 0):"));
+    // if (n < 0) alert("Input harus n >= 0");
+    // else {
+    //   let faktorial = 1;
+    //   for (let i = 1; i <= n; i++) {
+    //     faktorial *= i;
+    //   }
+    //   alert(`Hasil dari ${n}! adalah ${faktorial}`);
+    // }
+
+    // 2. Faktorial dengan tampilan lengkap
+    // let n = prompt("Masukkan angka n:");
+    // let hasil = 1;
+    // let tampilan = n + "! = ";
+    // while (n > 0) {
+    //   hasil *= n;
+    //   tampilan += n;
+    //   if (n > 1) tampilan += "*";
+    //   n--;
+    // }
+    // tampilan += " = " + hasil;
+    // console.log(tampilan);
+
+    // 3. Deret Fibonacci
+    // let n = Number(prompt("Masukkan jumlah deret Fibonacci:"));
+    // let a = 0, b = 1;
+    // console.log("Deret Fibonacci:");
+    // for (let i = 1; i <= n; i++) {
+    //   console.log(a);
+    //   let next = a + b;
+    //   a = b;
+    //   b = next;
+    // }
+
+    // 4. Menghitung Pembagi Bersama Terbesar dari dua buah bilangan
+    // let a = parseInt(prompt("Masukkan bilangan pertama (a): "));
+    // let b = parseInt(prompt("Masukkan bilangan kedua (b): "));
+
+    //   function gcd(x, y) {
+    //   while (y !== 0) {
+    //     let sisa = x % y;
+    //     x = y;
+    //     y = sisa;
+    //   }
+    //   return x;
+    //   }
+
+    //    let hasil = gcd(a, b);
+    //    console.info("PBT dari " + a + " dan " + b + " adalah " + hasil);
+
+
+    //mahir no 5
+  // let suara1 = 0, suara2 = 0; 
+  // let username = "admin";
+  // let password = "123";
+  // let pilihan;
+
+  // do {
+  //   console.log("Kandidat Ketua Kelas:");
+  //   console.log("[1] Rumana");
+  //   console.log("[2] Muhidin");
+  //   console.log("[3] Cetak Rekap (khusus panitia)");
+  //   console.log("[4] Keluar");
+
+  //   pilihan = prompt("Masukkan pilihan:");
+
+  //   if (pilihan == "1") {
+  //     suara1++;
+  //     console.log("Anda memilih Rumana");
+  //   } else if (pilihan == "2") {
+  //     suara2++;
+  //     console.log("Anda memilih Muhidin");
+  //   } else if (pilihan == "3") {
+  //     let user = prompt("Masukkan username:");
+  //     let pass = prompt("Masukkan password:");
+  //     if (user == username && pass == password) {
+  //       console.log("Hasil Rekap Suara:");
+  //       console.log("Rumana : " + suara1 + " suara");
+  //       console.log("Muhidin : " + suara2 + " suara");
+  //     } else {
+  //       console.log("Username atau password salah!");
+  //     }
+  //   } else if (pilihan != "4") {
+  //     console.log("Pilihan tidak valid");
+  //   }
+  // } while (pilihan != "4");
+
+  // console.log("Program selesai.");
+
+  //Mahir no 6
+  // a. Jika input n=4
+  // let n = parseInt(prompt("Masukkan nilai n untuk pola 6a: "));
+  // console.log("Pola A:");
+  // for (let i = 1; i <= n; i++) {
+  //   let baris = "";
+  //   for (let j = 1; j <= i; j++) {
+  //     baris += "* ";
+  //   }
+  //   console.log(baris);
+  // }
+
+  // //b. Jika input n=4
+  // let m = parseInt(prompt("Masukkan nilai n untuk pola 6b: "));
+  // console.log("Pola B:");
+  // for (let i = 1; i <= m; i++) {
+  //   let baris = "";
+  //   for (let j = 1; j <= i; j++) {
+  //     if (j == i) {
+  //       baris += "* ";
+  //     } else {
+  //       baris += "0 ";
+  //     }
+  //   }
+  //   console.log(baris);
+  // }
+
+  // //c. Jika input n=5 (n harus ganjil)
+  // let k = parseInt(prompt("Masukkan nilai n ganjil untuk pola 6c: "));
+  // if (k % 2 == 0) {
+  //   console.log("n harus ganjil!");
+  // } else {
+  //   console.log("Pola C:");
+  //   for (let i = 1; i <= k; i++) {
+  //     let baris = "";
+  //     for (let j = 1; j <= k; j++) {
+  //       if (
+  //         i == j || 
+  //         i + j == k + 1 
+  //       ) {
+  //         baris += "* ";
+  //       } else if (i == 1 || i == k) {
+  //         baris += "* ";
+  //       } else {
+  //         baris += "0 ";
+  //       }
+  //     }
+  //     console.log(baris);
+  //   }
+  // }
+
+  //d. Jika diinput n>=3 
+//   let p = parseInt(prompt("Masukkan nilai n untuk pola 6d (minimal 3): "));
+// if (p < 3) {
+//   console.log("Nilai n minimal 3!");
+// } else {
+//   console.log("Pola D:");
+//   for (let i = 1; i <= p; i++) {
+//     let baris = "";
+
+//     for (let j = i; j <= p + 2; j++) {
+//       baris += "0";
+//     }
+
+//     for (let k = 1; k <= (2 * i - 1); k++) {
+//       baris += "*";
+//     }
+
+//     console.log(baris);
+//   }
+// }
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+            let pilihan;
+      do{
+        pilihan = prompt("masukkan pilihan");
+
+        if(pilihan == "1"){
+            let alas = Number(prompt("masukan alas segitiga:"));
+            let tinggi = Number(prompt("masukan tinggi segitiga :"));
+            const luas = (alas,tinggi) => 1/2 * alas * tinggi;
+            alert (luas(alas,tinggi));
+
+        } else if (pilihan == "2") {
+            const keliling = (r) => {
+                return  2 *  (22/7) * r;
+            }
+            let r = Number(prompt("Masukan ruas jari-jari"));
+            alert(keliling(r));
+
+
+        } else if (pilihan == "3") {
+            let n = Number(prompt("Masukkan angka:"));
+            const isPrima = (n) => {
+                if (n === 0 || n === 1) return false; 
+                for (let i = 2; i < n; i++) {
+                    if (n % i === 0) return false;
+                }
+                return true;
+            };
+            if (isPrima(n)) {
+                alert(n + " adalah bilangan prima");
+            } else {
+                alert(n + " bukan bilangan prima");
+            }
+        }
+
+    } while (pilihan != "4");
+    </script>
+</body>
+</html>
